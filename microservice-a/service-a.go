@@ -12,7 +12,7 @@ import (
 )
 
 type Order struct {
-	Cupon    string
+	Coupon   string
 	CcNumber string
 }
 
@@ -42,11 +42,11 @@ func home(w http.ResponseWriter, r *http.Request) {
 
 func process(w http.ResponseWriter, r *http.Request) {
 
-	cupon := r.PostFormValue("cupon")
+	coupon := r.PostFormValue("coupon")
 	ccNumber := r.PostFormValue("cc-number")
 
 	order := Order{
-		Cupon:    cupon,
+		Coupon:   coupon,
 		CcNumber: ccNumber,
 	}
 
